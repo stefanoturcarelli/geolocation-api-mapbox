@@ -1,9 +1,5 @@
 "use strict";
 
-/* Map */
-
-const trackButton = document.querySelector("#track-btn");
-const flyButton = document.querySelector("#fly-btn");
 let lat, long;
 
 mapboxgl.accessToken =
@@ -15,6 +11,12 @@ const map = new mapboxgl.Map({
   pitch: 40,
   style: "mapbox://styles/mapbox/streets-v12", // style URL
 });
+
+map.dragPan.disable();
+map.keyboard.disable();
+map.scrollZoom.disable();
+map.doubleClickZoom.disable();
+map.touchZoomRotate.disableRotation();
 
 function getLocation(position) {
   const { latitude, longitude } = position.coords;
@@ -53,7 +55,6 @@ function createMarker(latitude, longitude) {
   // Create a default Marker and add it to the map.
   const marker = new mapboxgl.Marker({
     color: "#0599ff",
-    // scale: 0.6,
     rotation: 0,
   })
     .setLngLat([longitude, latitude])
@@ -77,17 +78,9 @@ const options = {
 };
 
 // Track button click event handler
-trackButton.addEventListener("click", () => {
-  if ("geolocation" in navigator) {
-    const geo = navigator.geolocation;
-    geo.getCurrentPosition(getLocation, errorHandler, options);
-  } else {
-    alert("Geolocation API is not supported by your browser");
-  }
-  flyButton.style.visibility = "visible";
-});
-
-// Fly button click event handler
-flyButton.addEventListener("click", () => {
-  goCenter(lat, long);
-});
+if ("geolocation" in navigator) {
+  const geo = navigator.geolocation;
+  geo.watchPosition(getLocation, errorHandler, options);
+} else {
+  alert("Geolocation API is not supported by your browser");
+}
