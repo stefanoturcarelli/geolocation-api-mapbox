@@ -20,7 +20,6 @@ map.touchZoomRotate.disableRotation();
 
 function getLocation(position) {
   const { latitude, longitude } = position.coords;
-  // console.log(`Longitude: ${longitude}, Latitude: ${latitude}`);
 
   lat = latitude;
   long = longitude;
@@ -49,16 +48,12 @@ function createMarker(latitude, longitude) {
     currentMarker.remove();
   }
 
-  // Create a popup, but don't add it to the map yet.
-  const popup = new mapboxgl.Popup({ offset: 20 }).setText("Mapster");
-
   // Create a default Marker and add it to the map.
   const marker = new mapboxgl.Marker({
     color: "#0599ff",
     rotation: 0,
   })
     .setLngLat([longitude, latitude])
-    .setPopup(popup) // sets a popup on this marker
     .addTo(map);
 
   // Update the current marker
@@ -77,7 +72,6 @@ const options = {
   enableHighAccuracy: true,
 };
 
-// Track button click event handler
 if ("geolocation" in navigator) {
   const geo = navigator.geolocation;
   geo.watchPosition(getLocation, errorHandler, options);
