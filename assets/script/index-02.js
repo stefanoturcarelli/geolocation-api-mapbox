@@ -16,7 +16,7 @@ map.dragPan.disable();
 map.keyboard.disable();
 map.scrollZoom.disable();
 map.doubleClickZoom.disable();
-map.touchZoomRotate.disableRotation();
+// map.touchZoomRotate.disableRotation();
 
 function getLocation(position) {
   const { latitude, longitude } = position.coords;
