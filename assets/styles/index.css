@@ -188,6 +188,11 @@ h1 {
   display: grid;
   grid-template-columns: 1fr;
   place-items: center;
+  text-align: center;
+}
+
+.title-container {
+  text-align: center;
 }
 
 .buttons-container {
@@ -196,4 +201,21 @@ h1 {
   grid-template-columns: repeat(2, 20rem);
   justify-content: center;
   padding: 4rem 0;
+}
+
+.link-to-example {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  background-color: dodgerblue;
+}
+
+body {
+  height: 100svh;
+  display: flex;
+  align-items: center;
 }
