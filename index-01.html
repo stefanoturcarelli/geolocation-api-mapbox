@@ -32,33 +32,29 @@
 	<meta property="og:type" content="website">
 
 	<!-- CSS and JS -->
+	<link rel="stylesheet" href="./assets/styles/reset.css">
+	<link rel="stylesheet" href="./assets/styles/index-01.css">
 	<script type="module" src="./assets/script/index-01.js"></script>
-	<link rel="stylesheet" href="./assets/styles/index.css">
 </head>
 
 <body>
-	<header></header>
-
-	<main>
+	<header>
 		<div class="container">
-			<section class="map-section" id="map-section">
-				<div class="section-title-container">
-					<h1>Track your location</h1>
-				</div>
-				<div class="buttons-container">
-					<a class="real-time-location-btn" href="./index-02.html">Real-time Location</a>
-					<button id="track-btn">Get Location</button>
-				</div>
-				<div class="map-container">
-					<!-- Map -->
-					<div id="map"></div>
-					<button id="fly-btn"><i class="fa-solid fa-location-dot"></i></button>
-				</div>
-			</section>
+			<div class="flex-container">
+				<h1>Track your location</h1>
+				<button id="track-btn">Get Location</button>
+			</div>
 		</div>
-	</main>
+	</header>
 
-	<footer></footer>
+	<div class="container">
+		<div class="map-container">
+			<div id="map"></div>
+			<button id="fly-btn">
+				<i class="fa-solid fa-location-dot"></i>
+			</button>
+		</div>
+	</div>
 </body>
 
 <noscript>

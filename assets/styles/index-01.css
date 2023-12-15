@@ -1,0 +1,86 @@
+header {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+#track-btn {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: #fff;
+}
+
+#track-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.map-container {
+  position: relative;
+  height: 70svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  outline: auto;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* Hide watermark */
+.mapboxgl-control-container {
+  display: none;
+}
+
+#fly-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 50%;
+  transition: 0.3s all ease-in-out;
+}
+
+#fly-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.real-time-location-btn {
+  background-color: dodgerblue;
+}
+
+.real-time-location-btn {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.real-time-location-btn:hover {
+  background-color: rgb(0, 99, 197);
+  color: #fff;
+}
