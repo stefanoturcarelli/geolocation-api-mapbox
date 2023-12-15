@@ -19,6 +19,11 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
 		rel="stylesheet">
 
+	<!-- Mapbox -->
+	<script src='https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css' rel='stylesheet' />
+
+
 	<!-- Update these -->
 	<title>GPS Map</title>
 	<meta name="description" content="GPS Map">
@@ -27,15 +32,33 @@
 	<meta property="og:type" content="website">
 
 	<!-- CSS and JS -->
-	<script type="module" src="./assets/script/index.js"></script>
+	<script type="module" src="./assets/script/index-01.js"></script>
 	<link rel="stylesheet" href="./assets/styles/index.css">
 </head>
 
 <body>
-	<div class="container">
-		<h1>GPS Examples</h1>
-		
-	</div>
+	<header></header>
+
+	<main>
+		<div class="container">
+			<section class="map-section" id="map-section">
+				<div class="section-title-container">
+					<h1>Track your location</h1>
+				</div>
+				<div class="buttons-container">
+					<a class="real-time-location-btn" href="./index-02.html">Real-time Location</a>
+					<button id="track-btn">Get Location</button>
+				</div>
+				<div class="map-container">
+					<!-- Map -->
+					<div id="map"></div>
+					<button id="fly-btn"><i class="fa-solid fa-location-dot"></i></button>
+				</div>
+			</section>
+		</div>
+	</main>
+
+	<footer></footer>
 </body>
 
 <noscript>
