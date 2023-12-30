@@ -21,10 +21,27 @@ h1 {
   cursor: pointer;
   background-color: dodgerblue;
   text-align: center;
+  display: grid;
+  align-items: center;
 }
 
-body {
-  height: 100svh;
-  display: flex;
-  align-items: center;
+.buttons-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+  padding-top: 2rem;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .buttons-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 425px) {
+  .buttons-container {
+    grid-template-columns: 1fr;
+  }
 }
