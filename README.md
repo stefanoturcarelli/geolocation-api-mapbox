@@ -1,4 +1,4 @@
-# GPS Map
+# Geolocation API and Mapbox
 
 ---
 
