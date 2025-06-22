@@ -31,12 +31,11 @@ header {
 
 .map-container {
   position: relative;
-  height: 70svh;
+  height: 55svh;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
-  outline: auto;
 }
 
 #map {

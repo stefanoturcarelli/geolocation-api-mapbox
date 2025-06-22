@@ -35,6 +35,36 @@ h1 {
 }
 
 /* ! ------------------------------------------------------------------------ */
+/* !                              NAVIGATION                                  */
+/* ! ------------------------------------------------------------------------ */
+
+.navigation-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.nav-button {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  background-color: #fff;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #e9ecef;
+}
+
+.nav-button:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* ! ------------------------------------------------------------------------ */
 /* !                              MESSAGE BOXES                               */
 /* ! ------------------------------------------------------------------------ */
 
@@ -94,5 +124,10 @@ h1 {
   .message-box {
     padding: 1rem 1.5rem;
     font-size: 1.5rem;
+  }
+
+  .nav-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.4rem;
   }
 }
