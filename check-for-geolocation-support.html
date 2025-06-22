@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check for geolocation support</title>
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+    <script
+      src="./assets/scripts/check-for-geolocation-support.js"
+      defer
+    ></script>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Check for geolocation support</title>
-	<link rel="stylesheet" href="./assets/styles/reset.css">
-	<script src="./assets/scripts/check-for-geolocation-support.js" defer></script>
-</head>
-
-<body>
-	<div class="container">
-		<p>Please inspect this page</p>
-	</div>
-
-</body>
-
+  <body>
+    <div class="container">
+      <div class="title-container">
+        <h1>Geolocation Support Check</h1>
+      </div>
+      <div class="message-container">
+        <div id="geolocation-message" class="message-box">
+          <p>Checking geolocation support...</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
